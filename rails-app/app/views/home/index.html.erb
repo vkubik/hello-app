@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World - SRE Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+    .connected { background-color: #d4edda; color: #155724; }
+    .disconnected { background-color: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+  <h1><%= @message %></h1>
+  
+  <h2>Service Status</h2>
+  <div class="status <%= @db_status == 'connected' ? 'connected' : 'disconnected' %>">
+    Database: <%= @db_status %>
+  </div>
+  <div class="status <%= @redis_status == 'connected' ? 'connected' : 'disconnected' %>">
+    Redis: <%= @redis_status %>
+  </div>
+  
+  <h2>Monitoring Links</h2>
+  <ul>
+    <li><a href="http://localhost:3001" target="_blank">Grafana Dashboard</a></li>
+    <li><a href="http://localhost:9090" target="_blank">Prometheus</a></li>
+    <li><a href="http://localhost:9093" target="_blank">Alertmanager</a></li>
+    <li><a href="/metrics" target="_blank">Application Metrics</a></li>
+    <li><a href="/health" target="_blank">Health Check</a></li>
+  </ul>
+</body>
+</html>
