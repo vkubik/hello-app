@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Starting SRE Technical Test Environment Provisioning..."
+echo "Starting Technical Test Environment Provisioning..."
 
 # Colors for output
 RED='\033[0;31m'
@@ -37,7 +37,7 @@ check_prerequisites() {
         exit 1
     fi
     
-    print_status "Prerequisites check passed ✓"
+    print_status "Prerequisites check passed"
 }
 
 # Create directory structure
@@ -687,13 +687,6 @@ display_info() {
     echo "  View logs:        docker-compose logs -f [service_name]"
     echo "  Restart service:  docker-compose restart [service_name]"
     echo
-    echo "📋 Next steps:"
-    echo "  1. Visit http://localhost:3000 to see the Hello World app"
-    echo "  2. Check http://localhost:3001 for Grafana dashboards"
-    echo "  3. Review docs/metrics.md for detailed monitoring guide"
-    echo "  4. Test alerts by stopping a service"
-    echo
-    print_status "Happy monitoring! 🚀"
 }
 
 # Cleanup function
@@ -708,7 +701,7 @@ trap cleanup_on_error ERR
 
 # Main execution
 main() {
-    print_status "Starting SRE Technical Test Environment Setup"
+    print_status "Starting Technical Test Environment Setup"
     
     check_prerequisites
     create_structure
