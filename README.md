@@ -22,7 +22,6 @@ This project includes a provisioning script (`provision.sh`) that:
   - Ruby, Rails
   - PostgreSQL
   - Redis
-  - Node.js & Yarn (Rails dependencies)
 - Sets up a sample Rails "Hello World" app
 - Connects the app to PostgreSQL and Redis
 - Deploys Prometheus and Grafana for monitoring
