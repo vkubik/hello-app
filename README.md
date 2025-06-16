@@ -11,12 +11,6 @@ Build a provisioning script that sets up a basic **"Hello World" Rails applicati
 - [Provisioning Overview](#provisioning-overview)
 - [Requirements](#requirements)
 - [How to Run](#how-to-run)
-- [Architecture](#architecture)
-- [Monitoring and Alerting](#monitoring-and-alerting)
-  - [Monitored Services](#monitored-services)
-  - [Key Metrics](#key-metrics)
-  - [Alerting Rules](#alerting-rules)
-- [Conclusion](#conclusion)
 
 ---
 
